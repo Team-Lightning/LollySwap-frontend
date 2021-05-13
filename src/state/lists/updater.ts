@@ -13,7 +13,6 @@ export default function Updater(): null {
   const { library } = useActiveWeb3React()
   const dispatch = useDispatch<AppDispatch>()
   const lists = useSelector<AppState, AppState['lists']['byUrl']>(state => state.lists.byUrl)
-
   const isWindowVisible = useIsWindowVisible()
 
   const fetchList = useFetchListCallback()
