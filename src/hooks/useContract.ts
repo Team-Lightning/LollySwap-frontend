@@ -48,11 +48,11 @@ export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: b
 
 export function useWETHContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  console.log('[] WETH -> ', WETH, chainId)
 
   if (chainId) {
-    WETH[chainId] = new Token(chainId, '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2', 18, 'WETH', 'Wrapped Ether')
+    WETH[chainId] = new Token(chainId, process.env.REACT_APP_WETH_ADDRESS ?? '', 18, 'WETH', 'Wrapped Ether')
   }
+
   // WETH[chainId]
   return useContract(chainId ? WETH[chainId].address : undefined, WETH_ABI, withSignerIfPossible)
 }
