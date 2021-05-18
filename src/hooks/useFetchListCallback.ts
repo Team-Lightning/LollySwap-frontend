@@ -36,6 +36,7 @@ export function useFetchListCallback(): (listUrl: string) => Promise<TokenList> 
       dispatch(fetchTokenList.pending({ requestId, url: listUrl }))
       return getTokenList(listUrl, ensResolver)
         .then(tokenList => {
+          console.log('[] tokenList -> ', tokenList);
           dispatch(fetchTokenList.fulfilled({ url: listUrl, tokenList, requestId }))
           return tokenList
         })

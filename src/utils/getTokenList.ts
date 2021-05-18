@@ -37,6 +37,9 @@ export default async function getTokenList(
   } else {
     urls = uriToHttp(listUrl)
   }
+
+  console.log('[] urls -> ', urls);
+
   for (let i = 0; i < urls.length; i++) {
     const url = urls[i]
     const isLast = i === urls.length - 1
@@ -63,6 +66,7 @@ export default async function getTokenList(
         }, '') ?? 'unknown error'
       throw new Error(`Token list failed validation: ${validationErrors}`)
     }
+
     return json
   }
   throw new Error('Unrecognized list URL protocol.')

@@ -61,9 +61,12 @@ export default createReducer(initialState, builder =>
       const current = state.byUrl[url]?.current
       const loadingRequestId = state.byUrl[url]?.loadingRequestId
 
+      console.log('[] current, tokenList, url -> ', current, tokenList, url);
+
       // no-op if update does nothing
       if (current) {
         const upgradeType = getVersionUpgrade(current.version, tokenList.version)
+        console.log('[] upgradeType, VersionUpgrade -> ', upgradeType, VersionUpgrade)
         if (upgradeType === VersionUpgrade.NONE) return
         if (loadingRequestId === null || loadingRequestId === requestId) {
           state.byUrl[url] = {

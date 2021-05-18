@@ -14,7 +14,7 @@ export function useAllTokens(): { [address: string]: Token } {
   const userAddedTokens = useUserAddedTokens()
   const allTokens = useSelectedTokenList()
 
-  return useMemo(() => {
+  const tokens = useMemo(() => {
     if (!chainId) return {}
     return (
       userAddedTokens
@@ -30,6 +30,10 @@ export function useAllTokens(): { [address: string]: Token } {
         )
     )
   }, [chainId, userAddedTokens, allTokens])
+
+  console.log('[] tokens -> ', tokens);
+
+  return tokens
 }
 
 // Check if currency is included in custom list from user storage

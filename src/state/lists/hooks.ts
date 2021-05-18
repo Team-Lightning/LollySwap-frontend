@@ -2,6 +2,7 @@ import { ChainId, Token } from '@uniswap/sdk'
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
+import { DEFAULT_CHAIN_ID } from '../../constants'
 import { AppState } from '../index'
 
 type TagDetails = Tags[keyof Tags]
@@ -35,7 +36,8 @@ const EMPTY_LIST: TokenAddressMap = {
   [ChainId.RINKEBY]: {},
   [ChainId.ROPSTEN]: {},
   [ChainId.GÖRLI]: {},
-  [ChainId.MAINNET]: {}
+  [ChainId.MAINNET]: {},
+  [DEFAULT_CHAIN_ID]: {}
 }
 
 const listCache: WeakMap<TokenList, TokenAddressMap> | null =

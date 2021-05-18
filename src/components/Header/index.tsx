@@ -18,6 +18,7 @@ import Settings from '../Settings'
 
 import Row, { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
+import { DEFAULT_CHAIN_ID } from '../../constants'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -129,7 +130,8 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
-  [ChainId.KOVAN]: 'Kovan'
+  [ChainId.KOVAN]: 'Kovan',
+  [DEFAULT_CHAIN_ID]: 'Aurora'
 }
 
 export default function Header() {
