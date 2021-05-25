@@ -52,7 +52,9 @@ export default function AddLiquidity({
 
   const oneCurrencyIsWETH = Boolean(
     chainId &&
+    // @ts-ignore
       ((currencyA && currencyEquals(currencyA, WETH[chainId])) ||
+      // @ts-ignore
         (currencyB && currencyEquals(currencyB, WETH[chainId])))
   )
 

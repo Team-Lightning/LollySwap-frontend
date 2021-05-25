@@ -1,4 +1,3 @@
-import { ChainId } from '@uniswap/sdk'
 import React from 'react'
 import { isMobile } from 'react-device-detect'
 import { Text } from 'rebass'
@@ -18,7 +17,7 @@ import Settings from '../Settings'
 
 import Row, { RowBetween } from '../Row'
 import Web3Status from '../Web3Status'
-import { DEFAULT_CHAIN_ID } from '../../constants'
+import { ChainId } from '../../constants/ChainId'
 
 const HeaderFrame = styled.div`
   display: flex;
@@ -131,7 +130,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
-  [DEFAULT_CHAIN_ID]: 'Aurora'
+  [ChainId.AURORA]: 'Aurora'
 }
 
 export default function Header() {

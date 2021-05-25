@@ -424,7 +424,9 @@ export default function RemoveLiquidity({
   const oneCurrencyIsETH = currencyA === ETHER || currencyB === ETHER
   const oneCurrencyIsWETH = Boolean(
     chainId &&
+    // @ts-ignore
       ((currencyA && currencyEquals(WETH[chainId], currencyA)) ||
+      // @ts-ignore
         (currencyB && currencyEquals(WETH[chainId], currencyB)))
   )
 
@@ -557,7 +559,9 @@ export default function RemoveLiquidity({
                       <RowBetween style={{ justifyContent: 'flex-end' }}>
                         {oneCurrencyIsETH ? (
                           <StyledInternalLink
+                            // @ts-ignore
                             to={`/remove/${currencyA === ETHER ? WETH[chainId].address : currencyIdA}/${
+                              // @ts-ignore
                               currencyB === ETHER ? WETH[chainId].address : currencyIdB
                             }`}
                           >
@@ -566,7 +570,9 @@ export default function RemoveLiquidity({
                         ) : oneCurrencyIsWETH ? (
                           <StyledInternalLink
                             to={`/remove/${
+                              // @ts-ignore
                               currencyA && currencyEquals(currencyA, WETH[chainId]) ? 'ETH' : currencyIdA
+                              // @ts-ignore
                             }/${currencyB && currencyEquals(currencyB, WETH[chainId]) ? 'ETH' : currencyIdB}`}
                           >
                             Receive ETH
