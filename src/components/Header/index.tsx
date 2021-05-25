@@ -131,6 +131,7 @@ const NETWORK_LABELS: { [chainId in ChainId]: string | null } = {
   [ChainId.ROPSTEN]: 'Ropsten',
   [ChainId.GÖRLI]: 'Görli',
   [ChainId.KOVAN]: 'Kovan',
+  [ChainId.AURORA]: 'Aurora',
   [DEFAULT_CHAIN_ID]: 'Aurora'
 }
 

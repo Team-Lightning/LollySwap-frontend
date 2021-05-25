@@ -24,6 +24,7 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.GÖRLI]: [WETH[ChainId.GÖRLI]],
   [ChainId.KOVAN]: [WETH[ChainId.KOVAN]],
+  [ChainId.AURORA]: [WETH[ChainId.AURORA]],
   [DEFAULT_CHAIN_ID]: [
     new Token(DEFAULT_CHAIN_ID, process.env.REACT_APP_WETH_ADDRESS ?? '', 18, 'WETH', 'Wrapped Ether')
   ]
