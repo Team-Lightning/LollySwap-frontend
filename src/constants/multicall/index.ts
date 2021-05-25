@@ -1,4 +1,5 @@
 import { ChainId } from '@uniswap/sdk'
+import { DEFAULT_CHAIN_ID } from './../../constants';
 import MULTICALL_ABI from './abi.json'
 
 // @ts-ignore
