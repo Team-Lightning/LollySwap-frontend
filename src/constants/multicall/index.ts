@@ -1,11 +1,6 @@
 import { ChainId } from '../ChainId'
 import MULTICALL_ABI from './abi.json'
 
-// @ts-ignore
-ChainId[DEFAULT_CHAIN_ID] = 'AURORA'
-
-// @ts-ignore
-ChainId['AURORA'] = DEFAULT_CHAIN_ID
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '0xeefBa1e63905eF1D7ACbA5a8513c70307C1cE441',
