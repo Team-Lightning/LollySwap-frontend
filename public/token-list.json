@@ -14,7 +14,7 @@
     ],
     "tokens": [
         {
-            "chainId": 1,
+            "chainId": 1313161555,
             "address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9",
             "name": "Aave",
             "symbol": "AAVE",
