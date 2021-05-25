@@ -31,8 +31,6 @@ export function useAllTokens(): { [address: string]: Token } {
     )
   }, [chainId, userAddedTokens, allTokens])
 
-  console.log('[] tokens -> ', tokens);
-
   return tokens
 }
 
